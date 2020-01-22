@@ -12,12 +12,20 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   color: black;
+
+  /* variables */
+  --vpblue: #2d54b1;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: #f1f1f1;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -28,6 +36,18 @@ ul {
 
 a {
   text-decoration: none;
+  color: #31353e;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+.fas,
+.far {
+  margin-right: 0.1rem;
+  color: #abbbe0;
 }
 
 /* Header */
@@ -38,7 +58,7 @@ icons in de nav toevoegen
 */
 
 header {
-  background-color: #2d54b1;
+  background-color: var(--vpblue);
   display: flex;
   flex-direction: column;
   z-index: 2;
@@ -126,15 +146,38 @@ text op img
   grid-template-areas:
     "large large small-1"
     "large large small-2"
-    "news news live";
+    "news news live"
+    "news news populair";
 }
 
-article > img {
+.jumbo_image > img {
   width: 100%;
 }
 
 .large {
   grid-area: large;
+}
+
+.jumbo_image {
+  position: relative;
+}
+
+.large__title {
+  position: absolute;
+  top: 70%;
+  left: 4%;
+  font-size: 2.6rem;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.5) 2px 0 4px;
+}
+
+.small__title {
+  position: absolute;
+  top: 70%;
+  left: 4%;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.5) 2px 0 4px;
 }
 
 .small-1 {
@@ -175,4 +218,34 @@ border nog fixen
   background: url(../images/comment.svg);
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+/* live */
+
+.live {
+  background-color: #fff;
+  grid-area: live;
+}
+.live__wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.live__wrapper p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.sidebar-title {
+  background-color: var(--vpblue);
+  padding: 1em 1.25em;
+  color: #fff;
+}
+
+/* populair */
+
+.populair {
+  background-color: #fff;
+  grid-area: populair;
 }
