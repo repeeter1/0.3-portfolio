@@ -77,6 +77,7 @@ header {
 .header__logo-left {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .header__logo-title {
@@ -147,7 +148,7 @@ text op img
     "large large small-1"
     "large large small-2"
     "news news live"
-    "news news populair";
+    "news-photo news-photo populair";
 }
 
 .jumbo_image > img {
@@ -220,10 +221,24 @@ border nog fixen
   background-repeat: no-repeat;
 }
 
+/* news photo */
+
+.news-photo {
+  grid-area: news-photo;
+  background-color: #fff;
+  border: 1px solid #ededed;
+  padding: 2rem;
+}
+
+.news-photo > img {
+  width: 100%;
+}
+
 /* live */
 
 .live {
   background-color: #fff;
+  border: 1px solid #ededed;
   grid-area: live;
 }
 .live__wrapper {
@@ -247,5 +262,41 @@ border nog fixen
 
 .populair {
   background-color: #fff;
+  border: 1px solid #ededed;
   grid-area: populair;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--vpblue);
+  margin-top: 3rem;
+  padding: 8em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer > div {
+  margin-left: 1rem;
+}
+
+.footer__header {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer__list a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.follow-us__social-icons {
+  display: flex;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.follow-us__social-icons > i {
+  margin-right: 1rem;
 }

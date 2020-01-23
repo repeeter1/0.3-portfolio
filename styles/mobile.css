@@ -1,3 +1,22 @@
 body {
-  background: red;
+  background: #f1f1f1;
+}
+
+.container {
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "large"
+    "small-1"
+    "small-2"
+    "news"
+    "news-photo "
+    "live"
+    "populair";
+
+  padding: 0;
+}
+
+.large__title {
+  font-size: 1.6rem;
 }
